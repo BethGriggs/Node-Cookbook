@@ -6,13 +6,13 @@ const db = mysql.createConnection({
   password: process.env.DB_MYSQL_PASSWORD,
 });
 
-db.query("CREATE DATABASE tasks");
-db.query("USE tasks");
+db.query("CREATE DATABASE tasks;");
+db.query("USE tasks;");
 
 db.query(`
 CREATE TABLE tasks.tasks (
-id INT NOT NULL AUTO_INCREMENT, 
-task TEXT NOT NULL, PRIMARY KEY ( id ))
+id INT NOT NULL AUTO_INCREMENT,
+task TEXT NOT NULL, PRIMARY KEY ( id ));
 `);
 
 const ignore = new Set(["ER_DB_CREATE_EXISTS", "ER_TABLE_EXISTS_ERROR"]);
