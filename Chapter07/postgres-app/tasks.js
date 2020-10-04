@@ -4,7 +4,7 @@ const db = new pg.Client();
 const task = process.argv[2];
 
 const CREATE_TABLE_SQL = `CREATE TABLE IF NOT EXISTS tasks
-                          (id SERIAL, task TEXT NOT NULL, PRIMARY KEY ( id ))`;
+                          (id SERIAL, task TEXT NOT NULL, PRIMARY KEY ( id ));`;
 const INSERT_TASK_SQL = `INSERT INTO tasks (task) VALUES ($1);`;
 const GET_TASKS_SQL = `SELECT * FROM tasks;`;
 

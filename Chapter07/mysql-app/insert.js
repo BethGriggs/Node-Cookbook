@@ -23,11 +23,14 @@ db.on("error", (err) => {
 });
 
 if (process.argv[2]) {
-  db.query(`
+  db.query(
+    `
       INSERT INTO tasks.tasks (task)
       VALUES (?);
-  `, [process.argv[2]]);
-};
+  `,
+    [process.argv[2]]
+  );
+}
 
 db.query(
   `
