@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-app",
+  "name": "postgres-app",
   "version": "1.0.0",
   "description": "",
   "main": "tasks.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.6.2"
+    "dotenv": "^8.2.0",
+    "pg": "^8.2.1"
   }
 }
