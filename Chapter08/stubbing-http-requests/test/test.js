@@ -4,7 +4,7 @@ const sinon = require("sinon");
 const github = require("../github.js");
 const octokitUserData = require("./octokitUserData.js");
 
-test("Get GitHub user by username", async function (t) {
+test("Get GitHub user by username", async (t) => {
   t.plan(3);
 
   sinon.stub(github, "getGitHubUser").returns(octokitUserData);
