@@ -1,10 +1,10 @@
 {
-  "name": "Chapter08",
+  "name": "testing-with-mocha",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "keywords": [],
   "author": "",
