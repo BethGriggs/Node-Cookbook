@@ -14,6 +14,11 @@ const schema = {
 };
 const validate = ajv.compile(schema);
 
+if (!validate(data, schema)) {
+  res.end("");
+  return;
+}
+
 const server = http.createServer((req, res) => {
   if (req.method === "POST" && req.url === "/") {
     greeting(req, res);
@@ -32,11 +37,6 @@ greeting = (req, res) => {
       data = JSON.parse(data);
     } catch (e) {
       res.end('{"msg": ""}');
-      return;
-    }
-
-    if (!validate(data, schema)) {
-      res.end("");
       return;
     }
 
