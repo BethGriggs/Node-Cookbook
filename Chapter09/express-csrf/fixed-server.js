@@ -26,9 +26,9 @@ app.get("/", (req, res) => {
   res.send(`
     <h1>Social Media Account - Login</h1>
     <form method="POST" action="/">
-      <label> Username <input name=username> </label>
-      <label> Password <input name=password type=password> </label>
-      <input type=submit>
+      <label> Username <input type="text" name="username"> </label>
+      <label> Password <input type="password" name="password"> </label>
+      <input type="submit">
     </form>
   `);
 });
@@ -49,9 +49,9 @@ app.get("/account", (req, res) => {
   res.send(`
       <h1>Social Media Account - Settings</h1>
       <p> Email: ${mockUser.email} </p>
-      <form method="POST" action=/update>
-        <input name=email value="${mockUser.email}">
-        <input type=submit value=Update >
+      <form method="POST" action="/update">
+        <input type="text" name="email" value="${mockUser.email}">
+        <input type="submit" value="Update" >
       </form>
     `);
 });
